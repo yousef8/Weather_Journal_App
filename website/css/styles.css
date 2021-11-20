@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Setting an image for background and making it fixed */
+body {
+    height: 100vh;
+    background-image: url(../images/cloud-usplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling the rest of the page */
+
+.container {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: fit-content;
+    margin: auto;
+    padding: 25px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* All display is block */
+label,
+input,
+textarea,
+button {
+    display: block;
+}
+
+/* Zipcode part in the form */
+.zip {
+    margin-bottom: 25px;
+}
+
+.zip label {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.zip input {
+    height: 30px;
+    padding: 10px;
+}
+
+/* Feelings part in the from */
+.feels {
+    margin-bottom: 25px;
+}
+
+.feels label {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.feels textarea {
+    padding: 10px;
+}
+
+/* Stying the submit button */
+.submit {
+    display: flex;
+    justify-content: center;
+}
+
+.submit button {
+    width: 90px;
+    height: 30px;
+}
