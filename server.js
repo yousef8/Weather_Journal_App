@@ -1,4 +1,6 @@
 // Setup empty JS object to act as endpoint for all routes
+let projectData = [];
+
 // Express to run server and routes
 const express = require('express');
 const cors = require('cors');
@@ -11,6 +13,7 @@ const app = express();
 /* Middleware*/
 //Here we are configuring express to use body-parser as middle-ware.
 app.use(bp.urlencoded({extended: false}));
+app.use(bp.json());
 
 // Cors for cross origin allowance
 app.use(cors());
@@ -28,7 +31,19 @@ function listening() {
 }
 
 // Initialize all route with a callback function
+app.get('/all', sendData);
 
 // Callback function to complete GET '/all'
+function sendData(req, res) {
+    res.send(projectData);
+}
 
 // Post Route
+app.post('/addData', receivedData)
+
+function receivedData(req, res) {
+    projectData.push(req.body);
+    console.log(projectData);
+    res.send("Added");
+}
+
